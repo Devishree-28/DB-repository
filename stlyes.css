@@ -1,66 +1,68 @@
-  * {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-font-family: "Poppins", sans-serif;
-}
-body {
-background-color: #aed7eb;
-}
-.wrapper {
-width: 400px;
-position: absolute;
-transform: translate(-50%, -50%);
-top: 50%;
-left: 50%;
-}
-.wrapper h2{
-  text-align: center;
-  margin: 0px 30px 50px 0px;
-  background: white;
-  padding: 10px;
-  width: 100%;
-  color: rgb(3, 64, 153);
-}
-.container {
-width: 100%;
-background-color: #ffffff;
-padding: 50px 30px;
-box-shadow: 0 20px 65px rgba(87, 11, 16, 0.3);
-position: relative;
-border-radius: 5px;
-text-align: center;
-}
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.display{
-   box-shadow: 0 0 20px rgba(0,139,253,0.25);
-   padding: 10px;
-   border: 1px solid rgba(9, 82, 158, 0.29);
-}
-.container p {
-color: #142350;
-line-height: 2;
-font-size: 19px;
-}
-.container h3 {
-color: #570c9d;
-margin: 35px 0 10px 35%;
-font-weight: 600;
-text-transform: capitalize;
-}
-.container h3::before{
-  content: "- ";
-  color: rgb(12, 94, 210);
-}
-.container button {
-background-color: #17203d;
-border: none;
-padding: 15px 45px;
-border-radius: 5px;
-margin-top: 40px;
-font-size: 18px;
-font-weight: 600;
-color: #ffffff;
-cursor: pointer;
-text-align: right;
-}
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(45deg, lightblue, white);
+        }
+
+        .star_rating{
+            user-select: none;
+            color: white;
+            background-color: white;
+            padding: 1.4rem 2.5rem;
+            margin: 2rem;
+            border-radius: .4rem;
+            text-align: center;
+			animation: slide-up 1s ease;
+        }
+
+        @keyframes slide-up{
+            0%{
+                opacity: 0;
+                transform: scale(.5);
+            }
+
+            100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+
+        .rating_heading{
+            color: white;
+            animation: scale-up 1s ease;
+        }
+
+        @keyframes scale-up{
+            0%{
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .star{
+            font-size: 3rem;
+            color: #ff9800;
+            background-color: unset;
+            border: none;
+        }
+
+        .star:hover{
+            cursor: pointer;
+        } 
